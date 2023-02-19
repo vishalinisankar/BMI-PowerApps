@@ -1,0 +1,142 @@
+"BMIcalculator As screen.'tabletLayout_Success_ver3.0'":
+    Fill: =RGBA(255, 255, 255, 1)
+
+    Height As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(50, 86, 160, 1)
+        Font: =Font.'Courier New'
+        Format: =TextFormat.Number
+        Height: =70
+        HintText: ="Height"
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =20
+        Width: =442
+        X: =862
+        Y: =151
+        ZIndex: =1
+
+    Age As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(50, 86, 160, 1)
+        Font: =Font.'Courier New'
+        Format: =TextFormat.Number
+        Height: =70
+        HintText: ="Age"
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Size: =20
+        Width: =442
+        X: =862
+        Y: =376
+        ZIndex: =2
+
+    Gender As radio:
+        Default: =""
+        Font: =Font.'Courier New'
+        Items: =["Male","Female"]
+        Layout: =Layout.Horizontal
+        Size: =25
+        Width: =442
+        X: =904
+        Y: =480
+        ZIndex: =3
+
+    Weight As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(50, 86, 160, 1)
+        Font: =Font.'Courier New'
+        Format: =TextFormat.Number
+        Height: =70
+        HintText: ="Weight"
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =20
+        Width: =442
+        X: =862
+        Y: =261
+        ZIndex: =4
+
+    Image8 As image:
+        Height: =768
+        Image: =e1db3f11431fe57e3a06639f4d74c233
+        ImagePosition: =ImagePosition.Fill
+        Width: =716
+        ZIndex: =5
+
+    BMI As button:
+        Fill: =RGBA(203, 53, 53, 1)
+        Font: =Font.'Courier New'
+        Height: =99
+        HoverFill: =ColorFade(RGBA(224, 110, 110, 1), -10%)
+        OnSelect: |-
+            =Set(h,Height.Text/100);
+            Set(A,(h^2));
+            Set(Ans,Weight.Text/A);
+            If(Ans<18.5,Set(val,"Underweight"),Ans>=18.5 && Ans<25,Set(val,"Normal"),Ans>=25 && Ans<30,Set(val,"Overweight"),Set(val,"Obese"));
+            If(Ans<18.5,Set(Col,Yellow),Ans>=18.5 && Ans<25,Set(Col,Green),Ans>=25 && Ans<30,Set(Col,Red),Set(Col,DarkRed));
+            Patch(Calculate,Defaults(Calculate),{Title:Acc,Gender:Gender.Selected.Value,Age:Value(Age.Text),Height:Value(Height.Text),Weight:Value(Weight.Text),Result:Ans,Status:val});
+            Navigate(Report,ScreenTransition.Fade);
+            Reset(Height);
+            Reset(Weight);
+            Reset(Age);
+            Reset(Gender)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =25
+        Text: ="Calculate BMI"
+        Width: =236
+        X: =965
+        Y: =603
+        ZIndex: =6
+
+    Label10 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =296
+        Size: =60
+        Text: ="Calc"
+        Width: =229
+        X: =218
+        Y: =243
+        ZIndex: =7
+
+    Icon10 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(WelcomePage,ScreenTransition.Fade)
+        X: =24
+        Y: =24
+        ZIndex: =10
+
+    Group1_4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =10
+
+        Title_4 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =150
+            Size: =30
+            Text: |-
+                ="BMI 
+                Calculator"
+            Width: =395
+            X: =91
+            Y: =29
+            ZIndex: =8
+
+        Icon3_4 As icon.Health:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =99
+            Icon: =Icon.Health
+            Width: =87
+            X: =145
+            Y: =20
+            ZIndex: =9
+

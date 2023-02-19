@@ -1,0 +1,157 @@
+AdminPage As screen:
+    Fill: =
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =619
+        Items: =Search(UserList,TextInput2.Text,"Title")
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        Width: =666
+        X: =700
+        Y: =149
+        ZIndex: =1
+
+        Image10 As image:
+            Height: =128
+            Image: =images
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title4 As label:
+            Font: =Font.'Courier New'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image10.Width - 104
+            X: =Image10.X + Image10.Width + 24
+            Y: =44
+            ZIndex: =2
+
+        Subtitle4 As label:
+            Font: =Font.'Courier New'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Username
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title4.Width
+            X: =Title4.X
+            Y: =Title4.Y + Title4.Height + 4
+            ZIndex: =3
+
+        NextArrow3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Navigate(ViewDetails,ScreenTransition.Fade)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator3 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+    Image9 As image:
+        Height: =768
+        Image: =e1db3f11431fe57e3a06639f4d74c233
+        ImagePosition: =ImagePosition.Fill
+        Width: =716
+        ZIndex: =2
+
+    Label9 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =221
+        Size: =70
+        Text: |-
+            ="Admin
+            View"
+        Width: =362
+        X: =177
+        Y: =286
+        ZIndex: =3
+
+    Icon13 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(MainPage,ScreenTransition.Fade)
+        X: =24
+        Y: =24
+        ZIndex: =6
+
+    Group1_6 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =6
+
+        Title_6 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =150
+            Size: =30
+            Text: |-
+                ="BMI 
+                Calculator"
+            Width: =395
+            X: =91
+            Y: =29
+            ZIndex: =4
+
+        Icon3_6 As icon.Health:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =99
+            Icon: =Icon.Health
+            Width: =87
+            X: =145
+            Y: =20
+            ZIndex: =5
+
+    TextInput2 As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Courier New'
+        Height: =90
+        HintText: ="Search  "
+        HoverFill: =RGBA(0, 0, 0, 0)
+        OnSelect: =
+        Size: =25
+        Width: =612
+        X: =742
+        Y: =11
+        ZIndex: =7
+
+    Icon2 As icon.Search:
+        Icon: =Icon.Search
+        X: =1276
+        Y: =24
+        ZIndex: =8
+

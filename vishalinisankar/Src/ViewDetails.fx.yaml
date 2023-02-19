@@ -1,0 +1,308 @@
+ViewDetails As screen:
+    Fill: =RGBA(255, 255, 255, 1)
+
+    FormViewer1 As formViewer:
+        AcceptsFocus: =false
+        DataSource: =UserList
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =768
+        Item: =Gallery2.Selected
+        NumberOfColumns: =1
+        Width: =662
+        X: =703
+        ZIndex: =1
+
+        Title_DataCard4 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.Title
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Title"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Required: =false
+            Width: =662
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            DataCardKey9 As label:
+                AutoHeight: =true
+                Font: =Font.'Courier New'
+                Height: =34
+                Size: =25
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =47
+                ZIndex: =1
+
+            DataCardValue9 As label:
+                Align: =Align.Right
+                DisplayMode: =Parent.DisplayMode
+                Font: =Font.'Courier New'
+                Height: =71
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =338
+                X: =293
+                Y: =24
+                ZIndex: =2
+
+        Username_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Username"
+            Default: =ThisItem.Username
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Username"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Required: =false
+            Width: =662
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            DataCardKey10 As label:
+                AutoHeight: =true
+                Font: =Font.'Courier New'
+                Height: =34
+                Size: =25
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =41
+                ZIndex: =1
+
+            DataCardValue10 As label:
+                Align: =Align.Right
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Font: =Font.'Courier New'
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =41
+                ZIndex: =2
+
+        Password_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Password"
+            Default: =ThisItem.Password
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Password"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =112
+            Required: =false
+            Width: =662
+            X: =0
+            Y: =2
+            ZIndex: =2
+
+            DataCardKey11 As label:
+                AutoHeight: =true
+                Font: =Font.'Courier New'
+                Height: =34
+                Size: =25
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =52
+                ZIndex: =1
+
+            DataCardValue11 As label:
+                Align: =Align.Right
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Font: =Font.'Courier New'
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =59
+                ZIndex: =2
+
+        Lastname_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Lastname"
+            Default: =ThisItem.Lastname
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Lastname"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =99
+            Required: =false
+            Width: =662
+            X: =0
+            Y: =3
+            ZIndex: =2
+
+            DataCardKey12 As label:
+                AutoHeight: =true
+                Font: =Font.'Courier New'
+                Height: =34
+                Size: =25
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =44
+                ZIndex: =1
+
+            DataCardValue12 As label:
+                Align: =Align.Right
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Font: =Font.'Courier New'
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =51
+                ZIndex: =2
+
+        Email_Id_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Email_Id"
+            Default: =ThisItem.Email_Id
+            DisplayMode: =DisplayMode.View
+            DisplayName: ="Email_Id"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =124
+            Required: =false
+            Width: =662
+            X: =0
+            Y: =4
+            ZIndex: =2
+
+            DataCardKey13 As label:
+                AutoHeight: =true
+                Font: =Font.'Courier New'
+                Height: =34
+                Size: =25
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =36
+                Y: =46
+                ZIndex: =1
+
+            DataCardValue13 As label:
+                Align: =Align.Right
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Font: =Font.'Courier New'
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =36
+                Y: =69
+                ZIndex: =2
+
+    Button1 As button:
+        Fill: =RGBA(203, 53, 53, 1)
+        Font: =Font.'Courier New'
+        Height: =71
+        HoverFill: =ColorFade(RGBA(224, 110, 110, 1), -10%)
+        OnSelect: =Navigate(AdminPage,ScreenTransition.Fade)
+        Size: =25
+        Text: ="Back"
+        Width: =230
+        X: =795
+        Y: =632
+        ZIndex: =2
+
+    Button5 As button:
+        Fill: =RGBA(203, 53, 53, 1)
+        Font: =Font.'Courier New'
+        Height: =71
+        HoverFill: =ColorFade(RGBA(224, 110, 110, 1), -10%)
+        OnSelect: |-
+            =Remove(UserList,Gallery2.Selected);
+            Notify("Account has been deleted successfully",NotificationType.Success)
+        Size: =25
+        Text: ="Delete"
+        Width: =230
+        X: =1094
+        Y: =632
+        ZIndex: =3
+
+    Image11 As image:
+        Height: =768
+        Image: =e1db3f11431fe57e3a06639f4d74c233
+        ImagePosition: =ImagePosition.Fill
+        Width: =716
+        ZIndex: =4
+
+    Icon11 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        X: =24
+        Y: =24
+        ZIndex: =7
+
+    Group1_5 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =7
+
+        Title_5 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =150
+            Size: =30
+            Text: |-
+                ="BMI 
+                Calculator"
+            Width: =395
+            X: =91
+            Y: =29
+            ZIndex: =5
+
+        Icon3_5 As icon.Health:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =99
+            Icon: =Icon.Health
+            Width: =87
+            X: =145
+            Y: =20
+            ZIndex: =6
+
+    Label14 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =295
+        Size: =60
+        Text: ="User Details"
+        Width: =528
+        X: =126
+        Y: =271
+        ZIndex: =8
+

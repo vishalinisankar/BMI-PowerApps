@@ -1,0 +1,143 @@
+"Report As screen.'tabletLayout_Success_ver3.0'":
+    Fill: =RGBA(255, 255, 255, 1)
+
+    Label3 As label:
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =114
+        Size: =35
+        Text: ="Your BMI value is"
+        Width: =517
+        X: =765
+        Y: =23
+        ZIndex: =1
+
+    Label4 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =98
+        Size: =50
+        Text: =Round(Ans,1)
+        Width: =569
+        X: =765
+        Y: =119
+        ZIndex: =2
+
+    Slider1 As slider:
+        Default: =Ans
+        DisplayMode: =DisplayMode.View
+        HandleFill: =White
+        HandleSize: =50
+        Height: =200
+        Max: =40
+        RailFill: =WhiteSmoke
+        RailThickness: =10
+        Reset: =true
+        ValueFill: =Col
+        Width: =617
+        X: =728
+        Y: =458
+        ZIndex: =3
+
+    Label5 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =119
+        Size: =35
+        Text: =val
+        Width: =601
+        X: =723
+        Y: =363
+        ZIndex: =7
+
+    Label6 As label:
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =111
+        Size: =35
+        Text: ="Your BMI Status is"
+        Width: =559
+        X: =765
+        Y: =282
+        ZIndex: =8
+
+    Image12 As image:
+        Height: =768
+        Image: =e1db3f11431fe57e3a06639f4d74c233
+        ImagePosition: =ImagePosition.Fill
+        Width: =716
+        ZIndex: =9
+
+    Label15 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =200
+        Size: =70
+        Text: ="Report"
+        Width: =371
+        X: =172
+        Y: =282
+        ZIndex: =10
+
+    Icon18 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(BMIcalculator,ScreenTransition.Fade)
+        X: =24
+        Y: =24
+        ZIndex: =13
+
+    Group1_7 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        Title_7 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =150
+            Size: =30
+            Text: |-
+                ="BMI 
+                Calculator"
+            Width: =395
+            X: =91
+            Y: =29
+            ZIndex: =11
+
+        Icon3_7 As icon.Health:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =99
+            Icon: =Icon.Health
+            Width: =87
+            X: =145
+            Y: =20
+            ZIndex: =12
+
+    Button4 As button:
+        Fill: =RGBA(203, 53, 53, 1)
+        Font: =Font.'Courier New'
+        Height: =106
+        HoverFill: =ColorFade(RGBA(224, 110, 110, 1), -10%)
+        OnSelect: |-
+            =If(val="Normal",Set(Normal,true),Set(Normal,false));
+            If(val="Underweight",Set(Underweight,true),Set(Underweight,false));
+            If(val="Overweight",Set(Overweight,true),Set(Overweight,false));
+            If(val="Obese",Set(Obese,true),Set(Obese,false));
+            Navigate(Screen1,ScreenTransition.Fade)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =25
+        Text: ="Food Plan"
+        Width: =223
+        X: =933
+        Y: =627
+        ZIndex: =15
+

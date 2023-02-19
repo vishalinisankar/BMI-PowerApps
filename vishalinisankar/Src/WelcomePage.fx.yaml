@@ -1,0 +1,186 @@
+WelcomePage As screen:
+    Fill: =RGBA(255, 255, 255, 1)
+    OnHidden: =
+
+    Button3 As button:
+        Fill: =RGBA(203, 53, 53, 1)
+        Font: =Font.'Courier New'
+        Height: =75
+        HoverFill: =ColorFade(RGBA(224, 110, 110, 1), -10%)
+        OnSelect: =Navigate(BMIcalculator,ScreenTransition.Fade)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =25
+        Text: ="Calculate BMI"
+        Width: =295
+        X: =503
+        Y: =643
+        ZIndex: =1
+
+    Image4 As image:
+        Height: =417
+        Image: =e1db3f11431fe57e3a06639f4d74c233
+        ImagePosition: =ImagePosition.Fill
+        Width: =1365
+        Y: =102
+        ZIndex: =3
+
+    Label1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =133
+        Size: =60
+        Text: ="Welcome"
+        Width: =389
+        X: =199
+        Y: =181
+        ZIndex: =4
+
+    Rectangle1 As rectangle:
+        Fill: =RGBA(118, 0, 0, 1)
+        Height: =102
+        Width: =1365
+        ZIndex: =5
+
+    Label2 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =107
+        Role: =
+        Size: =60
+        Text: =Acc
+        Width: =526
+        X: =561
+        Y: =194
+        ZIndex: =12
+
+    Label16 As label:
+        Align: =Align.Center
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =74
+        Size: =30
+        Text: ="Click below button to know your BMI "
+        Width: =1325
+        X: =40
+        Y: =550
+        ZIndex: =15
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =15
+
+        Circle2 As circle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =84
+            OnSelect: =Set(show,!show)
+            Width: =79
+            X: =1265
+            Y: =6
+            ZIndex: =13
+
+        Icon8 As icon.Person:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =79
+            Icon: =Icon.Person
+            OnSelect: =Set(show,!show)
+            Width: =77
+            X: =1266
+            Y: =4
+            ZIndex: =14
+
+    Label19 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =73
+        Size: =30
+        Text: =Concatenate("Hi ",Acc)
+        Width: =248
+        X: =997
+        Y: =17
+        ZIndex: =16
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =16
+
+        Rectangle2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =2
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =125
+            Visible: =show
+            Width: =227
+            X: =1086
+            Y: =79
+            ZIndex: =6
+
+        Icon12 As icon.Leave:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Leave
+            OnSelect: =Navigate(MainPage,ScreenTransition.Fade)
+            Visible: =show
+            Width: =40
+            X: =1265
+            Y: =150
+            ZIndex: =7
+
+        Icon15 As icon.HorizontalLine:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Icon: =Icon.HorizontalLine
+            Visible: =show
+            Width: =230
+            X: =1083
+            Y: =109
+            ZIndex: =8
+
+        Label12 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Courier New'
+            OnSelect: =Navigate(MainPage,ScreenTransition.Fade)
+            Size: =20
+            Text: ="Logout"
+            Visible: =show
+            X: =1095
+            Y: =154
+            ZIndex: =9
+
+        Label13 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Courier New'
+            Height: =42
+            OnSelect: =Navigate(EditDetails,ScreenTransition.Fade)
+            Size: =17
+            Text: ="Edit Profile"
+            Visible: =show
+            Width: =181
+            X: =1087
+            Y: =90
+            ZIndex: =10
+
+        Icon16 As icon.Edit:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =41
+            Icon: =Icon.Edit
+            OnSelect: =Navigate(EditDetails,ScreenTransition.Fade)
+            Visible: =show
+            Width: =34
+            X: =1268
+            Y: =85
+            ZIndex: =11
+

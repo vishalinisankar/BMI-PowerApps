@@ -1,0 +1,116 @@
+LoginPage As screen:
+    Fill: =RGBA(255, 255, 255, 1)
+
+    UserName As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(50, 86, 160, 1)
+        Font: =Font.'Courier New'
+        Height: =70
+        HintText: ="Username"
+        HoverBorderColor: =RGBA(50, 86, 160, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Size: =20
+        Width: =442
+        X: =846
+        Y: =194
+        ZIndex: =1
+
+    PassWord As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(50, 86, 160, 1)
+        Font: =Font.'Courier New'
+        Height: =70
+        HintText: ="Password"
+        HoverBorderColor: =RGBA(50, 86, 160, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Mode: =TextMode.Password
+        Size: =20
+        Width: =442
+        X: =846
+        Y: =356
+        ZIndex: =2
+
+    Login As button:
+        Fill: =RGBA(203, 53, 53, 1)
+        Font: =Font.'Courier New'
+        Height: =70
+        HoverFill: =ColorFade(RGBA(224, 110, 110, 1), -10%)
+        OnSelect: |-
+            =Set(show,false);
+            If(!IsBlank(LookUp(UserList,Username=UserName.Text,Password=PassWord.Text)),Navigate(WelcomePage,ScreenTransition.Fade),Notify("Incorrect Username or Password.Try Again",NotificationType.Error));
+            If(IsBlank(UserName.Text) And IsBlank(PassWord.Text),Notify("Please Enter Username or Password",NotificationType.Error));
+            Set(Acc,UserName.Text);
+            
+            Reset(UserName);
+            Reset(PassWord)
+             
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =25
+        Text: ="Login"
+        Width: =350
+        X: =892
+        Y: =526
+        ZIndex: =3
+
+    Image3 As image:
+        Height: =768
+        Image: =e1db3f11431fe57e3a06639f4d74c233
+        ImagePosition: =ImagePosition.Fill
+        Width: =716
+        ZIndex: =4
+
+    Label8 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =105
+        Size: =60
+        Text: ="Login"
+        Width: =391
+        X: =162
+        Y: =339
+        ZIndex: =8
+
+    Group1_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =8
+
+        Title_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =150
+            Size: =30
+            Text: |-
+                ="BMI 
+                Calculator"
+            Width: =395
+            X: =91
+            Y: =29
+            ZIndex: =5
+
+        Icon3_2 As icon.Health:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =99
+            Icon: =Icon.Health
+            Width: =87
+            X: =145
+            Y: =20
+            ZIndex: =6
+
+    Icon14 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(MainPage,ScreenTransition.Fade)
+        X: =24
+        Y: =24
+        ZIndex: =9
+

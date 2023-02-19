@@ -1,0 +1,100 @@
+MainPage As screen:
+    BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
+    ImagePosition: =ImagePosition.Center
+
+    CreateAccount As button:
+        DisabledBorderColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(203, 53, 53, 1)
+        Font: =Font.'Courier New'
+        Height: =78
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =ColorFade(RGBA(224,110, 110, 1), -10%)
+        OnSelect: =Navigate(NewAccount,ScreenTransition.Fade)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =20
+        Text: ="Create Account"
+        Width: =362
+        X: =887
+        Y: =218
+        ZIndex: =1
+
+    LoginUser As button:
+        DisabledBorderColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(203, 53, 53, 1)
+        Font: =Font.'Courier New'
+        Height: =78
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =ColorFade(RGBA(224, 110, 110, 1), -10%)
+        OnSelect: =Navigate(LoginPage,ScreenTransition.Fade)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =20
+        Text: ="Login  As User"
+        Width: =362
+        X: =887
+        Y: =390
+        ZIndex: =2
+
+    LoginAdmin As button:
+        DisabledBorderColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(203, 53, 53, 1)
+        Font: =Font.'Courier New'
+        Height: =78
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =ColorFade(RGBA(224, 110, 110, 1), -10%)
+        OnSelect: =Navigate(AdminPage,ScreenTransition.Fade)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =20
+        Text: ="Login As Admin"
+        Width: =362
+        X: =887
+        Y: =565
+        ZIndex: =3
+
+    Image1 As image:
+        Height: =768
+        Image: =e1db3f11431fe57e3a06639f4d74c233
+        ImagePosition: =ImagePosition.Fill
+        Width: =716
+        ZIndex: =4
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =7
+
+        Title As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =177
+            Size: =60
+            Text: |-
+                ="BMI 
+                Calculator"
+            Width: =498
+            X: =169
+            Y: =358
+            ZIndex: =5
+
+        Icon3 As icon.Health:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =125
+            Icon: =Icon.Health
+            Width: =141
+            X: =153
+            Y: =321
+            ZIndex: =6
+

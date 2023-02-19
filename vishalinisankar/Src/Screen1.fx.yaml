@@ -1,0 +1,252 @@
+"Screen1 As screen.'tabletLayout_Success_ver3.0'":
+
+    CompositePieChart2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+        Title2 As label:
+            Align: =Align.Center
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =43
+            Size: =25
+            Text: ="Normal"
+            Visible: =Normal
+            Width: =576
+            X: =788
+            Y: =79
+            ZIndex: =2
+
+        PieChart2 As pieChart:
+            Explode: =5
+            Font: =Font.'Courier New'
+            Height: =456
+            ItemColorSet: =[RGBA(102,153,255, 1),RGBA(255,153,51, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            Items: =Table1
+            Size: =15
+            Visible: =Normal
+            Width: =576
+            X: =788
+            Y: =97
+            ZIndex: =3
+
+        Legend2 As legend:
+            Font: =Font.'Courier New'
+            Height: =219
+            ItemColorSet: =PieChart2.ItemColorSet
+            Items: =PieChart2.SeriesLabels
+            Size: =20
+            Visible: =Normal
+            Width: =576
+            X: =788
+            Y: =475
+            ZIndex: =4
+
+    CompositePieChart6 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =5
+
+        Title8 As label:
+            Align: =Align.Center
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =43
+            Size: =25
+            Text: ="Underweight"
+            Visible: =Underweight
+            Width: =576
+            X: =788
+            Y: =79
+            ZIndex: =6
+
+        PieChart6 As pieChart:
+            Explode: =5
+            Font: =Font.'Courier New'
+            Height: =456
+            ItemColorSet: =[RGBA(102,153,255, 1),RGBA(255,153,51, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            Items: =Table1_1
+            Size: =15
+            Visible: =Underweight
+            Width: =576
+            X: =788
+            Y: =79
+            ZIndex: =7
+
+        Legend7 As legend:
+            Font: =Font.'Courier New'
+            Height: =176
+            ItemColorSet: =PieChart6.ItemColorSet
+            Items: =PieChart6.SeriesLabels
+            Size: =20
+            Visible: =Underweight
+            Width: =576
+            X: =788
+            Y: =518
+            ZIndex: =8
+
+    CompositePieChart5 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =9
+
+        Title9 As label:
+            Align: =Align.Center
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =28
+            Size: =25
+            Text: ="Obese"
+            Visible: =Obese
+            Width: =576
+            X: =788
+            Y: =79
+            ZIndex: =10
+
+        PieChart5 As pieChart:
+            Explode: =5
+            Font: =Font.'Courier New'
+            Height: =454
+            ItemColorSet: =[RGBA(102,153,255, 1),RGBA(255,153,51, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            Items: =Table2
+            Size: =15
+            Visible: =Obese
+            Width: =576
+            X: =769
+            Y: =113
+            ZIndex: =11
+
+        Legend8 As legend:
+            Font: =Font.'Courier New'
+            Height: =192
+            ItemColorSet: =PieChart5.ItemColorSet
+            Items: =PieChart5.SeriesLabels
+            Size: =20
+            Visible: =Obese
+            Width: =576
+            X: =788
+            Y: =567
+            ZIndex: =12
+
+    CompositePieChart8 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        Title11 As label:
+            Align: =Align.Center
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =25
+            Size: =25
+            Text: ="Overweight"
+            Visible: =Overweight
+            Width: =576
+            X: =788
+            Y: =63
+            ZIndex: =14
+
+        PieChart8 As pieChart:
+            Explode: =5
+            Font: =Font.'Courier New'
+            ItemColorSet: =[RGBA(102,153,255, 1),RGBA(255,153,51, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            Items: =Table1_2
+            Size: =15
+            Visible: =Overweight
+            Width: =576
+            X: =788
+            Y: =93
+            ZIndex: =15
+
+        Legend10 As legend:
+            Font: =Font.'Courier New'
+            Height: =200
+            ItemColorSet: =PieChart8.ItemColorSet
+            Items: =PieChart8.SeriesLabels
+            Size: =20
+            Visible: =Overweight
+            Width: =576
+            X: =788
+            Y: =493
+            ZIndex: =16
+
+    Image6 As image:
+        Height: =768
+        Image: =e1db3f11431fe57e3a06639f4d74c233
+        ImagePosition: =ImagePosition.Fill
+        Width: =716
+        ZIndex: =17
+
+    Icon4 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back(ScreenTransition.Fade)
+        X: =24
+        Y: =24
+        ZIndex: =20
+
+    Group1_9 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =20
+
+        Title_9 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =150
+            Size: =30
+            Text: |-
+                ="BMI 
+                Calculator"
+            Width: =395
+            X: =91
+            Y: =29
+            ZIndex: =18
+
+        Icon3_9 As icon.Health:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =99
+            Icon: =Icon.Health
+            Width: =87
+            X: =145
+            Y: =20
+            ZIndex: =19
+
+    Label22 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =185
+        Size: =70
+        Text: ="Food Plan"
+        Width: =363
+        X: =232
+        Y: =326
+        ZIndex: =21
+
+    Button7 As button:
+        Fill: =RGBA(203, 53, 53, 1)
+        Font: =Font.'Courier New'
+        Height: =70
+        HoverFill: =ColorFade(RGBA(224, 110, 110, 1), -10%)
+        OnSelect: =Navigate(Comment,ScreenTransition.Fade)
+        Size: =25
+        Text: ="Please Give us Feedback"
+        Width: =263
+        X: =940
+        Y: =676
+        ZIndex: =22
+

@@ -1,0 +1,182 @@
+NewAccount As screen:
+    BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
+    ImagePosition: =ImagePosition.Center
+
+    Username As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(50, 86, 160, 1)
+        Font: =Font.'Courier New'
+        Height: =70
+        HintText: ="UserName"
+        HoverBorderColor: =RGBA(50, 86, 160, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Size: =20
+        Width: =442
+        X: =808
+        Y: =309
+        ZIndex: =1
+
+    Password As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(50, 86, 160, 1)
+        Font: =Font.'Courier New'
+        Height: =70
+        HintText: ="Password"
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Mode: =TextMode.Password
+        Size: =20
+        Width: =442
+        X: =808
+        Y: =411
+        ZIndex: =2
+
+    Firstname As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(50, 86, 160, 1)
+        Font: =Font.'Courier New'
+        Height: =70
+        HintText: ="FirstName"
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Size: =20
+        Width: =442
+        X: =808
+        Y: =69
+        ZIndex: =3
+
+    Lastname As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(50, 86, 160, 1)
+        Font: =Font.'Courier New'
+        Height: =70
+        HintText: ="LastName"
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Size: =20
+        Width: =442
+        X: =808
+        Y: =202
+        ZIndex: =4
+
+    EmailId As text:
+        Default: =""
+        DisabledBorderColor: =RGBA(50, 86, 160, 1)
+        Font: =Font.'Courier New'
+        Height: =70
+        HintText: ="Email Id"
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Size: =20
+        Width: =442
+        X: =808
+        Y: =544
+        ZIndex: =5
+
+    AccountCreate As button:
+        Fill: =RGBA(203, 53, 53, 1)
+        Font: =Font.'Courier New'
+        Height: =70
+        HoverFill: =ColorFade(RGBA(224, 110, 110, 1), -10%)
+        OnSelect: |
+            =Set(Exist," ");
+            Set(Pass," ");
+            If(IsBlank(Username.Text)&&IsBlank(Password.Text)&&IsBlank(Firstname.Text)&&IsBlank(Lastname.Text)&&IsBlank(EmailId.Text),Notify("Please Enter All details",NotificationType.Error));
+            If(!IsBlank(LookUp(UserList,Title=Firstname.Text)),Set(Exist,"User already exist"),Len(Password.Text)<4,Set(Pass,"Enter atleast 5 Characters"),IsMatch(Password.Text,"(?!^[0-9]\*$)(?!^[A-Z]\*$)(?!^[a-z]\*$)([a-zA-Z0-9]{5,10})"),Set(Pass,"Atleast 1 Number and 1 Alphabetic character required."),IsMatch(EmailId.Text,Email),Set(Update,Patch(UserList,Defaults(UserList),{Username:Username.Text,Title:Firstname.Text,Lastname:Lastname.Text,Password:Password.Text,Email_Id:EmailId.Text})) && Navigate(SuccessPage,ScreenTransition.Fade));
+            
+            
+            Reset(Username);
+            Reset(Password);
+            Reset(Firstname);
+            Reset(Lastname);
+            Reset(EmailId)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =20
+        Text: ="Create Account"
+        Width: =350
+        X: =854
+        Y: =659
+        ZIndex: =6
+
+    Image2 As image:
+        Height: =768
+        Image: =e1db3f11431fe57e3a06639f4d74c233
+        ImagePosition: =ImagePosition.Fill
+        Width: =716
+        ZIndex: =7
+
+    Label7 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =283
+        Size: =65
+        Text: |-
+            ="Create New
+            Account"
+        Width: =462
+        X: =127
+        Y: =272
+        ZIndex: =8
+
+    Icon17 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(MainPage,ScreenTransition.Fade)
+        X: =24
+        Y: =24
+        ZIndex: =11
+
+    Group1_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =11
+
+        Title_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Courier New'
+            FontWeight: =FontWeight.Bold
+            Height: =150
+            Size: =30
+            Text: |-
+                ="BMI 
+                Calculator"
+            Width: =395
+            X: =91
+            Y: =29
+            ZIndex: =9
+
+        Icon3_1 As icon.Health:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =99
+            Icon: =Icon.Health
+            Width: =87
+            X: =145
+            Y: =20
+            ZIndex: =10
+
+    Label20 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        Font: =Font.'Courier New'
+        Height: =39
+        Size: =15
+        Text: =Exist
+        Width: =396
+        X: =808
+        Y: =151
+        ZIndex: =12
+
+    Label21 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        Font: =Font.'Courier New'
+        Height: =49
+        Size: =15
+        Text: =Pass
+        Width: =442
+        X: =808
+        Y: =488
+        ZIndex: =13
+

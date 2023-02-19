@@ -1,0 +1,215 @@
+{
+  "0117c883-68a8-4535-8b19-725f29918e35": {
+    "connectionParameters": {},
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1481/1.0.1481.2460/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "me,b%21-OTTZpvftU29yBQoLdkYHdZv3yn-m9NEoe4a4mUa0f4PeuZP40acS4k5OpXBnj1u,01YV6SN6KGIRSSTDCVWBCJJFAE7YTJYU3Q": {
+        "dataSources": {
+          "Table2": {
+            "tableName": "{B3E4F82D-2CB0-45B7-A47A-65219D1E76C2}"
+          }
+        }
+      },
+      "me,b%21-OTTZpvftU29yBQoLdkYHdZv3yn-m9NEoe4a4mUa0f4PeuZP40acS4k5OpXBnj1u,01YV6SN6NV62YR6JRPM5FID7AS4J33CHFS": {
+        "dataSources": {
+          "Table1_2": {
+            "tableName": "{BD249AF4-0E57-44BB-A342-FE81AE60350D}"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Table2",
+      "Table1_2"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "0117c883-68a8-4535-8b19-725f29918e35"
+  },
+  "15154717-6012-4662-aafd-79f2168a137f": {
+    "connectionParameters": {},
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/depfeife/special-train/1.0.1489.2478/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "66057712-fff4-4ac1-a7ce-b888123d2436"
+    ],
+    "id": "15154717-6012-4662-aafd-79f2168a137f"
+  },
+  "1c12f800-2e2a-4dcd-897a-9eb4de79c041": {
+    "connectionParameters": {},
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1472/1.0.1472.2427/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "1c12f800-2e2a-4dcd-897a-9eb4de79c041"
+  },
+  "66057712-fff4-4ac1-a7ce-b888123d2436": {
+    "connectionParameters": {},
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1493/1.0.1493.2486/excel/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excel",
+      "parameterHints": {
+        "15154717-6012-4662-aafd-79f2168a137f": {
+          "value": "fileSource"
+        }
+      },
+      "parameterHintsV2": {
+        "fileSource": {
+          "value": "15154717-6012-4662-aafd-79f2168a137f"
+        }
+      }
+    },
+    "datasets": {
+      "b!-OTTZpvftU29yBQoLdkYHdZv3yn-m9NEoe4a4mUa0f4PeuZP40acS4k5OpXBnj1u.01YV6SN6KGIRSSTDCVWBCJJFAE7YTJYU3Q": {
+        "dataSources": {
+          "Table1": {
+            "tableName": "Table1"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Table1",
+      "Table1_1"
+    ],
+    "dependencies": {
+      "fileSource": "15154717-6012-4662-aafd-79f2168a137f"
+    },
+    "dependents": [],
+    "id": "66057712-fff4-4ac1-a7ce-b888123d2436"
+  },
+  "68119eb0-66a4-46cc-b8c4-2b67fd545360": {
+    "connectionParameters": {},
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1493/1.0.1493.2486/excel/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excel",
+      "parameterHints": {
+        "ec7cbe57-aed4-47c3-aebe-ff854c890043": {
+          "value": "fileSource"
+        }
+      },
+      "parameterHintsV2": {
+        "fileSource": {
+          "value": "ec7cbe57-aed4-47c3-aebe-ff854c890043"
+        }
+      }
+    },
+    "datasets": {
+      "b!-OTTZpvftU29yBQoLdkYHdZv3yn-m9NEoe4a4mUa0f4PeuZP40acS4k5OpXBnj1u.01YV6SN6ISF6KV4YL5CVD3FY4MPJZIH6UP": {
+        "dataSources": {
+          "Table1_1": {
+            "tableName": "Table1"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Table1_1"
+    ],
+    "dependencies": {
+      "fileSource": "ec7cbe57-aed4-47c3-aebe-ff854c890043"
+    },
+    "dependents": [],
+    "id": "68119eb0-66a4-46cc-b8c4-2b67fd545360"
+  },
+  "95756e88-d185-4542-9340-65ca17180d3d": {
+    "connectionParameters": {},
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1482/1.0.1482.2463/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "95756e88-d185-4542-9340-65ca17180d3d"
+  },
+  "ec7cbe57-aed4-47c3-aebe-ff854c890043": {
+    "connectionParameters": {},
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/depfeife/special-train/1.0.1489.2478/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "68119eb0-66a4-46cc-b8c4-2b67fd545360"
+    ],
+    "id": "ec7cbe57-aed4-47c3-aebe-ff854c890043"
+  },
+  "ed1e13b6-1648-4384-8195-38d6ebc30a79": {
+    "connectionParameters": {},
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1487/1.0.1487.2472/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://vishalini.sharepoint.com/sites/BMI": {
+        "dataSources": {
+          "Calculate": {
+            "tableName": "f8310fb8-d9ca-4772-9792-6593c71fb98e"
+          },
+          "Feedback": {
+            "tableName": "a6542e6a-a12c-486e-a5a3-ef22951fc8d1"
+          },
+          "UserList": {
+            "tableName": "f62f6ff2-3564-4ce8-9a59-d725e90fa2a4"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "UserList",
+      "Calculate",
+      "Feedback"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ed1e13b6-1648-4384-8195-38d6ebc30a79"
+  }
+}
